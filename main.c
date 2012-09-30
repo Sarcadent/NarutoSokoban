@@ -2,9 +2,9 @@
 main.c
 ------
 
-Par mateo21, pour Le Site du Zér0 (www.siteduzero.com)
+Par Sarcadent Tp du site du ZÃ©ro
 
-Rôle : menu du jeu. Permet de choisir entre l'éditeur et le jeu lui-même.
+Rï¿½le : menu du jeu. Permet de choisir entre l'ï¿½diteur et le jeu lui-mï¿½me.
 */
 
 #include <stdlib.h>
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
     SDL_Init(SDL_INIT_VIDEO);
 
-    SDL_WM_SetIcon(IMG_Load("caisse.jpg"), NULL); // L'icône doit être chargée avant SDL_SetVideoMode
+    SDL_WM_SetIcon(IMG_Load("caisse.jpg"), NULL); // L'icï¿½ne doit ï¿½tre chargï¿½e avant SDL_SetVideoMode
     ecran = SDL_SetVideoMode(408, 408, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
     //ecran = SDL_SetVideoMode(LARGEUR_FENETRE, HAUTEUR_FENETRE, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
     SDL_WM_SetCaption("Naruto Sokoban", NULL);
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
             case SDL_KEYDOWN:
                 switch(event.key.keysym.sym)
                 {
-                    case SDLK_ESCAPE: // Veut arrêter le jeu
+                    case SDLK_ESCAPE: // Veut arrï¿½ter le jeu
                         if (afficherManuel != 1)
                         {
                             continuer = 0;
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
                             afficherManuel = 0;
                         }
                         break;
-                    case SDLK_1: // Demande à jouer
+                    case SDLK_1: // Demande ï¿½ jouer
                         if (afficherManuel != 1)
                         {
                             menuNiveau(ecran, 1);
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
                             afficherManuel = 0;
                         }
                         break;
-                    case SDLK_2: // Demande l'éditeur de niveaux
+                    case SDLK_2: // Demande l'ï¿½diteur de niveaux
                         if (afficherManuel != 1)
                         {
                         menuNiveau(ecran, 0);
@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
                         }
                         break;
                     case SDLK_3:
-                        //afficher image avec les règles
+                        //afficher image avec les rï¿½gles
                         if (afficherManuel == 0)
                         {
                             afficherManuel = 1;
@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
                 break;
         }
 
-        // Effacement de l'écran
+        // Effacement de l'ï¿½cran
         ecran = SDL_SetVideoMode(408, 408, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
 
         SDL_FillRect(ecran, NULL, SDL_MapRGB(ecran->format, 0, 0, 0));
